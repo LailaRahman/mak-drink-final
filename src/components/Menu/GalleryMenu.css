@@ -1,0 +1,79 @@
+.gallery-container {
+  display: flex;
+  padding: 50px;
+  gap: 50px;
+  align-items: flex-start;
+  flex-wrap: wrap; /* responsive for small screens */
+}
+
+/* Left text list */
+.gallery-left {
+  margin-top: 70px;
+  flex: 1;  /* smaller portion */
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* space between items */
+}
+
+.gallery-item {
+  display: flex;
+  align-items: center; /* vertical alignment */
+  gap: 15px; /* space between ID and label */
+}
+
+.gallery-id {
+  color: #631512;
+  font-size: 18px;
+  width: 50px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.gallery-label {
+  font-size: clamp(30px, 5vw, 60px); /* responsive font size */
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+/* Right big image */
+.gallery-right {
+   flex: 1;  /* bigger portion for the image */
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-right img {
+  width: 100%;         /* fill container width */
+  max-height: 90vh;  /* max 80% of viewport height */
+  object-fit: cover;   /* cover container */
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .gallery-container {
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .gallery-left,
+  .gallery-right {
+    flex: unset;
+    width: 100%;
+  }
+
+  .gallery-label {
+    font-size: clamp(20px, 8vw, 50px); /* smaller font on mobile */
+    text-align: center;
+  }
+
+  .gallery-right {
+    justify-content: center;
+  }
+
+  .gallery-right img {
+    max-width: 90%;
+  }
+}
