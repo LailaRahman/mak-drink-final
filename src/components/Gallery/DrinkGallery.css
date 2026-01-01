@@ -2,20 +2,20 @@
   display: flex;
   gap: 20px;
   padding: 50px;
-  flex-wrap: wrap; /* makes it responsive */
+  flex-wrap: wrap; 
 }
 
 /* Left big image */
 .drink-main-image {
   width: 100%;
-  max-height: 500px;   /* limit height */
-  margin-bottom: 20px;
-  overflow: hidden;     /* optional: crop if image is taller */
+  max-height: 500px;   
+  margin-bottom: 10px;
+  overflow: hidden;     
 }
 
 .drink-main-image img {
-  width: 100%;          /* full width */
-  height: auto;         /* maintain natural aspect ratio */
+  width: 100%;         
+  height: auto;         
   display: block;
 }
 
@@ -24,8 +24,8 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  min-width: 250px;  /* ensures list doesn’t get too small */
+  gap: 5px;
+  min-width: 250px;
 }
 
 .drink-card {
@@ -33,7 +33,7 @@
   align-items: center;
   border-bottom: 1px solid #ddd;
   padding-bottom: 15px;
-  gap: 10px;
+  gap: 5px;
 }
 
 .drink-info {
@@ -51,7 +51,7 @@
 .drink-id {
   font-family: serif;
   font-weight: bold;
-  margin-right: 50px; /* space between ID and title */
+  margin-right: 20px; 
 }
 .danger {
   color: #631512 !important;

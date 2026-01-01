@@ -1,66 +1,96 @@
 import "./DrinkGallery.css";
 
 import mainImg from "../../assets/mak-drink-7.png";
+
 import drink8 from "../../assets/mak-drink-8.png";
 import drink9 from "../../assets/mak-drink-9.png";
 import drink10 from "../../assets/mak-drink-10.png";
 import drink11 from "../../assets/mak-drink-11.png";
 import drink12 from "../../assets/mak-drink-12.png";
 
-const drinksData = [
-  { id: "01", title: "karamel drinks lemon", subtitle: "its a special drink for lemon girls that taste like lemon", img: drink8 },
-  { id: "02", title: "karamel drinks lemon", subtitle: "its a special drink for lemon girls that taste like lemon", img: drink9 },
-  { id: "03", title: "karamel drinks cheery", subtitle: "its a special drink for lemon girls that taste like lemon", img: drink10 },
-  { id: "04", title: "lemon drinks test cheery", subtitle: "its a special drink for lemon girls that taste like lemon", img: drink11 },
-  { id: "05", title: "lemon drinks test cheery", subtitle: "its a special drink for lemon girls that taste like lemon", img: drink12 },
-];
+const drinksByCategory = {
+  ultra: [
+    { id: "01", title: "Ultra Lemon", subtitle: "Fresh & powerful citrus taste", img: drink8 },
+    { id: "02", title: "Ultra Berry", subtitle: "Bold mixed berry flavor", img: drink9 },
+    { id: "03", title: "Ultra Mango", subtitle: "Tropical energy boost", img: drink10 },
+    { id: "04", title: "Ultra Apple", subtitle: "Crisp green apple taste", img: drink11 },
+    { id: "05", title: "Ultra Cherry", subtitle: "Sweet cherry kick", img: drink12 },
+  ],
 
-const DrinkGallery = () => {
+  food: [
+    { id: "01", title: "Food Cola", subtitle: "Perfect companion for meals", img: drink8 },
+    { id: "02", title: "Food Orange", subtitle: "Bright orange refreshment", img: drink9 },
+    { id: "03", title: "Food Lime", subtitle: "Zesty lime flavor", img: drink10 },
+    { id: "04", title: "Food Grape", subtitle: "Smooth grape soda", img: drink11 },
+    { id: "05", title: "Food Peach", subtitle: "Soft peach sweetness", img: drink12 },
+  ],
+
+  drinks: [
+    { id: "01", title: "Mint Drink", subtitle: "Cool & refreshing mint", img: drink8 },
+    { id: "02", title: "Cherry Drink", subtitle: "Rich cherry taste", img: drink9 },
+    { id: "03", title: "Lemon Drink", subtitle: "Sharp lemon freshness", img: drink10 },
+    { id: "04", title: "Berry Drink", subtitle: "Fruity berry blend", img: drink11 },
+    { id: "05", title: "Tropical Drink", subtitle: "Exotic tropical mix", img: drink12 },
+  ],
+
+  portraits: [
+    { id: "01", title: "Classic Portrait", subtitle: "Elegant crafted flavor", img: drink8 },
+    { id: "02", title: "Golden Portrait", subtitle: "Premium smooth taste", img: drink9 },
+    { id: "03", title: "Dark Portrait", subtitle: "Deep & bold notes", img: drink10 },
+    { id: "04", title: "Soft Portrait", subtitle: "Balanced mild flavor", img: drink11 },
+    { id: "05", title: "Signature Portrait", subtitle: "House special blend", img: drink12 },
+  ],
+
+  monsters: [
+    { id: "01", title: "Monster Red", subtitle: "Strong energy blast", img: drink8 },
+    { id: "02", title: "Monster Green", subtitle: "Wild herbal mix", img: drink9 },
+    { id: "03", title: "Monster Blue", subtitle: "Icy cool rush", img: drink10 },
+    { id: "04", title: "Monster Purple", subtitle: "Dark berry power", img: drink11 },
+    { id: "05", title: "Monster Black", subtitle: "Maximum intensity", img: drink12 },
+  ],
+};
+
+const DrinkGallery = ({ activeCategory }) => {
+  const drinksData = drinksByCategory[activeCategory] || [];
+
   return (
     <div className="container-fluid p-5">
       <div className="row g-4">
 
-        {/* Left Column: Main Image */}
+        {/* LEFT IMAGE */}
         <div className="col-lg-5 col-md-12">
           <img
-            src={mainImg}
-            alt="drinks"
-            className=" mb-2 drink-main-image"
+            src={drinksData[0]?.img || mainImg}
+            alt={activeCategory}
+            className="drink-main-image"
           />
         </div>
 
-        {/* Right Column: Drink List */}
+        {/* RIGHT MENU */}
         <div className="col-lg-7 col-md-12">
           {drinksData.map((drink) => (
             <div
               key={drink.id}
-              className="d-flex align-items-center border-bottom"
-              style={{ width: "100%" }}
+              className="d-flex align-items-center border-bottom py-3"
             >
-              {/* ID */}
               <div style={{ width: "50px", textAlign: "center" }}>
                 <span className="danger">({drink.id})</span>
               </div>
 
-{/* Title + Subtitle */}
-<div style={{ flex: 1, textAlign: "center" }}>
-  <div style={{ display: "inline-block", textAlign: "left" }}>
-    <h5 className="mb-1">{drink.title}</h5>
-    <p className="text-muted mb-0" style={{ fontSize: "0.9rem" }}>
-      {drink.subtitle}
-    </p>
-  </div>
-</div>
-
-
-              {/* Image */}
-              <div style={{ width: "120px", textAlign: "center" }}>
-                <img
-                  src={drink.img}
-                  alt={drink.title}
-                  style={{ width: "120px", height: "100px", objectFit: "cover" }}
-                />
+              <div style={{ flex: 1 }}>
+                <h5 className="mb-1">{drink.title}</h5>
+                <p className="text-muted mb-0">{drink.subtitle}</p>
               </div>
+
+              <img
+                src={drink.img}
+                alt={drink.title}
+                style={{
+                  width: "90px",
+                  height: "68px",
+                  objectFit: "cover",
+                }}
+              />
             </div>
           ))}
         </div>

@@ -1,4 +1,3 @@
-
 import { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
 import "./GalleryMenu.css";
@@ -10,11 +9,11 @@ import imgPortraits from "../../assets/mak-drink-5.png";
 import imgMonsters from "../../assets/mak-drink-6.png";
 
 const categories = [
-  { id: "00", label: "Ultra", img: imgUltra },
-  { id: "01", label: "Food", img: imgFood },
-  { id: "02", label: "DRINKS", img: imgDrinks },
-  { id: "03", label: "Portraits", img: imgPortraits },
-  { id: "04", label: "Monsters", img: imgMonsters },
+  { id: "00", key: "ultra", label: "Ultra", img: imgUltra },
+  { id: "01", key: "food", label: "Food", img: imgFood },
+  { id: "02", key: "drinks", label: "DRINKS", img: imgDrinks },
+  { id: "03", key: "portraits", label: "Portraits", img: imgPortraits },
+  { id: "04", key: "monsters", label: "Monsters", img: imgMonsters },
 ];
 
 const GalleryMenu = ({ onHoverCategory }) => {
@@ -37,15 +36,17 @@ const GalleryMenu = ({ onHoverCategory }) => {
           <div
             key={cat.id}
             ref={(el) => (itemRefs.current[index] = el)}
-            className={`gallery-item ${active.id === cat.id ? "active" : ""}`}
+            className={`gallery-item ${
+              active.key === cat.key ? "active" : ""
+            }`}
             onMouseEnter={() => {
               setActive(cat);
-              onHoverCategory(cat.label); // 🔥 CONNECTED
+              onHoverCategory(cat.key); 
 
               gsap.fromTo(
                 itemRefs.current[index],
                 { opacity: 0.5, x: -20 },
-                { opacity: 1, x: 0, duration: 0.4 }
+                
               );
             }}
           >
