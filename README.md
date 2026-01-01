@@ -1,16 +1,44 @@
-# React + Vite
+Modern Restaurant & Beverage Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Mak Drink is a modern, responsive restaurant website designed to showcase beverages, menu items, and brand identity with a clean and performant frontend architecture. The project is built using React and Vite, focusing on scalability, maintainability, and user experience.
 
-Currently, two official plugins are available:
+🔍 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This application serves as a digital presence for a restaurant or drink brand, featuring curated galleries, structured menu sections, and essential business information such as opening hours and reservations.
 
-## React Compiler
+The project is designed with component-based architecture and optimized asset handling for fast loading and smooth user interactions.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Technology Stack
 
-## Expanding the ESLint configuration
+Frontend Framework: React.js
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Build Tool: Vite
+
+Language: JavaScript (ES6+)
+
+Styling: CSS
+
+Package Manager: npm
+
+Version Control: Git
+
+Key Features
+
+Responsive and modern UI
+
+Modular and reusable React components
+
+Drink and menu gallery with optimized images
+
+Clear separation of concerns (assets, components, pages)
+
+Fast build and hot module replacement via Vite
+
+Scalable structure for future backend/API integration
+
+Installation & Development
+Prerequisites
+
+Node.js (v18 or higher recommended)
+
+npm
