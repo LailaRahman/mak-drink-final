@@ -1,89 +1,76 @@
-
-/* Reservation Form */
-.reservation-form {
-  flex: 1;
-  min-width: 320px;
+/* Full height row and columns */
+.full-height-row {
+  display: flex;
+  align-items: stretch; 
 }
 
-/* Add space inside both columns */
+.full-height-col {
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+}
+
 .reservation-form,
 .opening-times {
-  padding: 0 30px; /* horizontal spacing */
+  flex: 1; 
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 100%; 
 }
 
-
-.reservation-form h2 {
-  font-size: 40px; /* BIGGER */
+/* Reservation Form */
+.reservation-form h2,
+.opening-times h2 {
+  font-size: 60px;
   color: #6e2c2c;
   margin-bottom: 30px;
 }
 
-/* Form rows */
-.form-row {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 22px;
-}
-
-.form-group {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
+/* Form Inputs */
 .form-group label {
-  font-size: 20px; /* BIGGER */
+  font-size: 20px;
 }
 
 .form-group input {
   padding: 12px;
   border: 1px solid #555;
-  font-size: 18px; /* BIGGER */
+  font-size: 18px;
   border-radius: 4px;
+  width: 100%; /* full width */
+  
 }
-
 /* Book Button */
 .reservation-form button {
-  margin-top: 25px;
+  margin-top: auto; 
   width: 100%;
   padding: 14px;
   background-color: #6e1f1f;
   color: white;
   border: none;
-  font-size: 20px; /* BIGGER */
+  font-size: 20px;
   cursor: pointer;
   border-radius: 5px;
 }
 
 /* Opening Times */
-.opening-times {
-  flex: 1;
-  width: 100%;
-}
-
-.opening-times h2 {
-  font-size: 40px; /* BIGGER */
-  color: #6e2c2c;
-  margin-bottom: 30px;
-}
-
 .time-list {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  
 }
 
 .time-row {
   display: flex;
   gap: 20px;
-  font-size: 16px; /* BIGGER */
+  font-size: 30px;
   align-items: center;
 }
 
 .time-row .day {
   width: 140px;
-  font-weight: bold;
+  
 }
 
 .time-row .times {
@@ -97,13 +84,12 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .reservation-container {
+  .full-height-row {
     flex-direction: column;
-    gap: 35px;
   }
 
-  .form-row {
-    flex-direction: column;
-    gap: 18px;
+  .reservation-form,
+  .opening-times {
+    padding: 15px;
   }
 }

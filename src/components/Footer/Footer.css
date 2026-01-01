@@ -4,16 +4,18 @@
 
 /* Logo */
 .footer-logo {
-  max-width: 200px;
+  max-width: 350px;
 }
 
 /* Links */
 .footer-links li {
-  margin-bottom: 10px; /* spacing between links */
+  margin-bottom: 10px; 
+  font-size: 25px;
 }
 
 .footer-links li:last-child {
   margin-bottom: 0;
+  
 }
 
 .footer-links a {
@@ -30,6 +32,7 @@
   max-width: 250px;
   width: 100%;
   text-align: left;
+  font-size: 20px;
 }
 
 /* Button */

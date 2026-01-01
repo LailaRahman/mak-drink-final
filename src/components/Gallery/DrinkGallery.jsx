@@ -4,17 +4,23 @@ import mainImg from "../../assets/mak-drink-7.png";
 
 import drink8 from "../../assets/mak-drink-8.png";
 import drink9 from "../../assets/mak-drink-9.png";
-import drink10 from "../../assets/mak-drink-10.png";
+import drink10 from "../../assets/drinks.jpg";
 import drink11 from "../../assets/mak-drink-11.png";
-import drink12 from "../../assets/mak-drink-12.png";
+import drink12 from "../../assets/ultra5.png";
+
+import ultra1 from "../../assets/ultra1.jpg";
+import ultra2 from "../../assets/ultra2.jpg";
+import ultra3 from "../../assets/ultra3.jpg";
+import ultra4 from "../../assets/ultra4.jpg";
+import ultra5 from "../../assets/ultra5.png";
 
 const drinksByCategory = {
   ultra: [
-    { id: "01", title: "Ultra Lemon", subtitle: "Fresh & powerful citrus taste", img: drink8 },
-    { id: "02", title: "Ultra Berry", subtitle: "Bold mixed berry flavor", img: drink9 },
-    { id: "03", title: "Ultra Mango", subtitle: "Tropical energy boost", img: drink10 },
-    { id: "04", title: "Ultra Apple", subtitle: "Crisp green apple taste", img: drink11 },
-    { id: "05", title: "Ultra Cherry", subtitle: "Sweet cherry kick", img: drink12 },
+    { id: "01", title: "Ultra Lemon", subtitle: "Fresh & powerful citrus taste", img: ultra1 },
+    { id: "02", title: "Ultra Berry", subtitle: "Bold mixed berry flavor", img: ultra2 },
+    { id: "03", title: "Ultra Mango", subtitle: "Tropical energy boost", img: ultra3 },
+    { id: "04", title: "Ultra Apple", subtitle: "Crisp green apple taste", img: ultra4 },
+    { id: "05", title: "Ultra Cherry", subtitle: "Sweet cherry kick", img: ultra5 },
   ],
 
   food: [
@@ -33,7 +39,7 @@ const drinksByCategory = {
     { id: "05", title: "Tropical Drink", subtitle: "Exotic tropical mix", img: drink12 },
   ],
 
-  portraits: [
+  dessert: [
     { id: "01", title: "Classic Portrait", subtitle: "Elegant crafted flavor", img: drink8 },
     { id: "02", title: "Golden Portrait", subtitle: "Premium smooth taste", img: drink9 },
     { id: "03", title: "Dark Portrait", subtitle: "Deep & bold notes", img: drink10 },

@@ -2,17 +2,17 @@ import { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
 import "./GalleryMenu.css";
 
-import imgUltra from "../../assets/mak-drink-6.png";
-import imgFood from "../../assets/mak-drink-3.png";
-import imgDrinks from "../../assets/mak-drink-4.png";
-import imgPortraits from "../../assets/mak-drink-5.png";
-import imgMonsters from "../../assets/mak-drink-6.png";
+import imgUltra from "../../assets/ultra.jpg";
+import imgFood from "../../assets/food.jpg";
+import imgDrinks from "../../assets/drinks.jpg";
+import imgPortraits from "../../assets/dessert.jpg";
+import imgMonsters from "../../assets/monsters.jpg";
 
 const categories = [
   { id: "00", key: "ultra", label: "Ultra", img: imgUltra },
   { id: "01", key: "food", label: "Food", img: imgFood },
-  { id: "02", key: "drinks", label: "DRINKS", img: imgDrinks },
-  { id: "03", key: "portraits", label: "Portraits", img: imgPortraits },
+  { id: "02", key: "drinks", label: "Drinks", img: imgDrinks },
+  { id: "03", key: "dessert", label: "Dessert", img: imgPortraits },
   { id: "04", key: "monsters", label: "Monsters", img: imgMonsters },
 ];
 
