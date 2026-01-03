@@ -1,12 +1,13 @@
 import { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
-import "./GalleryMenu.css";
 
-import imgUltra from "../../assets/ultra.jpg";
-import imgFood from "../../assets/food.jpg";
-import imgDrinks from "../../assets/drinks.jpg";
-import imgPortraits from "../../assets/dessert.jpg";
-import imgMonsters from "../../assets/monsters.jpg";
+
+import imgUltra from "../assets/ultra.jpg";
+import imgFood from "../assets/food.jpg";
+import imgDrinks from "../assets/drinks.jpg";
+import imgPortraits from "../assets/dessert.jpg";
+import imgMonsters from "../assets/monsters.jpg";
+
 
 const categories = [
   { id: "00", key: "ultra", label: "Ultra", img: imgUltra },
@@ -30,7 +31,7 @@ const GalleryMenu = ({ onHoverCategory }) => {
   }, [active]);
 
   return (
-    <div className="gallery-container">
+    <div className="gallery-container menu">
       <div className="gallery-left">
         {categories.map((cat, index) => (
           <div

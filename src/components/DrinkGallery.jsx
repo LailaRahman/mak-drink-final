@@ -1,18 +1,16 @@
-import "./DrinkGallery.css";
+import mainImg from "../assets/mak-drink-7.png";
 
-import mainImg from "../../assets/mak-drink-7.png";
+import drink8 from "../assets/mak-drink-8.png";
+import drink9 from "../assets/mak-drink-9.png";
+import drink10 from "../assets/drinks.jpg";
+import drink11 from "../assets/mak-drink-11.png";
+import drink12 from "../assets/ultra5.png";
 
-import drink8 from "../../assets/mak-drink-8.png";
-import drink9 from "../../assets/mak-drink-9.png";
-import drink10 from "../../assets/drinks.jpg";
-import drink11 from "../../assets/mak-drink-11.png";
-import drink12 from "../../assets/ultra5.png";
-
-import ultra1 from "../../assets/ultra1.jpg";
-import ultra2 from "../../assets/ultra2.jpg";
-import ultra3 from "../../assets/ultra3.jpg";
-import ultra4 from "../../assets/ultra4.jpg";
-import ultra5 from "../../assets/ultra5.png";
+import ultra1 from "../assets/ultra1.jpg";
+import ultra2 from "../assets/ultra2.jpg";
+import ultra3 from "../assets/ultra3.jpg";
+import ultra4 from "../assets/ultra4.jpg";
+import ultra5 from "../assets/ultra5.png";
 
 const drinksByCategory = {
   ultra: [
@@ -60,49 +58,51 @@ const DrinkGallery = ({ activeCategory }) => {
   const drinksData = drinksByCategory[activeCategory] || [];
 
   return (
-    <div className="container-fluid p-5">
-      <div className="row g-4">
+ <div className="container-fluid px-5 py-3">
+  <div className="row g-0">
 
-        {/* LEFT IMAGE */}
-        <div className="col-lg-5 col-md-12">
-          <img
-            src={drinksData[0]?.img || mainImg}
-            alt={activeCategory}
-            className="drink-main-image"
-          />
-        </div>
-
-        {/* RIGHT MENU */}
-        <div className="col-lg-7 col-md-12">
-          {drinksData.map((drink) => (
-            <div
-              key={drink.id}
-              className="d-flex align-items-center border-bottom py-3"
-            >
-              <div style={{ width: "50px", textAlign: "center" }}>
-                <span className="danger">({drink.id})</span>
-              </div>
-
-              <div style={{ flex: 1 }}>
-                <h5 className="mb-1">{drink.title}</h5>
-                <p className="text-muted mb-0">{drink.subtitle}</p>
-              </div>
-
-              <img
-                src={drink.img}
-                alt={drink.title}
-                style={{
-                  width: "90px",
-                  height: "68px",
-                  objectFit: "cover",
-                }}
-              />
-            </div>
-          ))}
-        </div>
-
+    {/* LEFT IMAGE */}
+    <div className="col-lg-5 col-md-12">
+      <div className="drink-main-image">
+        <img
+          src={drinksData[0]?.img || mainImg}
+          alt={activeCategory}
+        />
       </div>
     </div>
+
+    {/* RIGHT MENU */}
+    <div className="col-lg-7 col-md-12">
+      {drinksData.map((drink) => (
+        <div
+          key={drink.id}
+          className="d-flex align-items-center border-bottom py-2"
+        >
+          <div style={{ width: "50px", textAlign: "center" }}>
+            <span className="danger">({drink.id})</span>
+          </div>
+
+          <div style={{ flex: 1 }}>
+            <h5 className="mb-1">{drink.title}</h5>
+            <p className="text-muted mb-0">{drink.subtitle}</p>
+          </div>
+
+          <img
+            src={drink.img}
+            alt={drink.title}
+            style={{
+              width: "90px",
+              height: "68px",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      ))}
+    </div>
+
+  </div>
+</div>
+
   );
 };
 
